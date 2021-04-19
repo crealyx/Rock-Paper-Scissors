@@ -10,8 +10,7 @@ let computerChoice = '';
 
 // store elements in variables
 const round = document.querySelector('.round')
-const yourScore = document.querySelector('.yourScore')
-const compScore = document.querySelector('.compScore')
+const scores = document.querySelector('.scores')
 const result = document.querySelector('.result')
 const rock = document.querySelector('.rock')
 const paper = document.querySelector('.paper')
@@ -26,8 +25,6 @@ const choices = Array.from(document.querySelectorAll('button'))
 // gameplay
 choices.forEach(choice => {
     round.textContent = `Round: 0`;
-    yourScore.textContent = `Your Score: 0`;
-    compScore.textContent = `Computer Score: 0`;
     result.textContent = 'Waiting for player to choose..';
     choice.addEventListener('click', () =>{
         choice == rock ? (playerChoice = 'rock', playerChosen.setAttribute('src','/Rock-Paper-Scissors/imgs/rock.png'))
@@ -36,8 +33,7 @@ choices.forEach(choice => {
         let gameResult = game();
         totalRound++
         round.textContent = `Round: ${totalRound}`;
-        yourScore.textContent = `Your Score: ${playerScore}`;
-        compScore.textContent = `Computer Score: ${computerScore}`;
+        scores.textContent = `${playerScore}:${computerScore}`;
         result.textContent = `${gameResult}`;
 
     })
