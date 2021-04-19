@@ -1,0 +1,142 @@
+html{
+    text-align: center;
+    font-family:monospace;
+    background-color: #8C1EFF;
+    color: #FFD319;
+    padding:0px;
+    margin:0px 0px;
+    background-image: linear-gradient(
+        180deg, rgba(6, 93, 255, 0.589),
+        rgba(234, 0, 255, 0.753)),url(/Rock-Paper-Scissors/imgs/retro.jpg);
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:center;
+    background-size: auto;
+    height: 100%;
+    width: 100%;
+}
+
+*{
+    margin: 0px;
+}
+
+h1{
+    margin-top: 20px;
+    font-size: 4rem;
+    color: rgb(0, 255, 255);
+    background-color: rgba(69, 5, 85, 0.52);
+}
+
+h2,p{
+    font-size: 2rem;
+}
+
+.round{
+    color: rgb(251, 255, 0);
+    font-size: 3rem;
+}
+
+.chosen-wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+.chosen-wrapper p{
+    color: rgb(255, 255, 255);
+    border: 2px solid black;
+    background-color: rgba(244, 0, 252, 0.513);
+}
+
+.wasted{
+    width: 400px;
+    padding-bottom: 5px;
+}
+
+.wastedDiv{
+    background-color: rgba(0, 0, 0, 0.657);
+    width: 100%;
+    padding: 20px 0px;
+    margin-top: 70px;
+}
+.result{
+    color: rgb(0, 252, 252);
+    font-size: 3rem;
+}
+
+.reset{
+    color: rgb(0, 0, 0);
+    width: 200px;
+    background-color: rgba(9, 255, 222, 0.753);
+    height:50px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.reset:hover{
+    background-color: rgba(240, 6, 170, 0.733);
+}
+
+
+.choice-wrapper{
+    padding:50px;
+    
+}
+.player{
+    width: 300px;
+    height: 300px;
+}
+.computer{
+    width: 300px;
+    height: 300px;
+}
+.playerAnimation{
+    margin: 10px 0px;
+    border: 3px solid black;
+    position: relative;
+    background-color: #55ddffb0;
+    width: 100%;
+    height: 90%;
+}
+.compAnimation{
+    margin: 10px 0px;
+    border: 3px solid black;
+    position: relative;
+    background-color: #ff00009f;
+    width: 100%;
+    height: 90%;
+}
+.chosen-wrapper img{
+    max-width: 200px;
+    min-height: 220px;
+    margin: 25px
+}
+
+.img-chosen-player{
+    position: absolute;
+    right: 20px;
+}
+.img-chosen-comp{
+    position: absolute;
+    right: 20px;
+    transform: scale(-1, 1);
+}
+.choice-wrapper button{
+    border: 2px solid black;
+    background-color: #7684d6c0;
+    cursor:pointer;
+}
+.choice-wrapper button:hover{
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgb(195, 237, 248);
+}
+.choice-wrapper button:active{
+    border: 2px solid rgb(0, 204, 255);
+    background-color: rgb(64, 137, 255);
+}
+
+.choice-wrapper img{
+    max-width: 100px;
+    min-height: 110px;
+    margin: 25px;
+}
+
