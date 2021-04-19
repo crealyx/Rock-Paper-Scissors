@@ -33,8 +33,6 @@ choices.forEach(choice => {
         choice == rock ? (playerChoice = 'rock', playerChosen.setAttribute('src','/Rock-Paper-Scissors/imgs/rock.png'))
         : choice == paper ? (playerChoice = 'paper', playerChosen.setAttribute('src','/Rock-Paper-Scissors/imgs/paper.png'))
         : (playerChoice = 'scissors', playerChosen.setAttribute('src','/Rock-Paper-Scissors/imgs/sciss.png'));
-        playerAnim();
-        compAnim();
         let gameResult = game();
         totalRound++
         round.textContent = `Round: ${totalRound}`;
@@ -132,37 +130,3 @@ function resetGame(){
         return false;
     })
 }
-
-// animate player's choice left to right
-var id = null;
-function playerAnim() {
-  var elem = playerChosen;
-  var pos = -100;
-  clearInterval(id);
-  id = setInterval(frame, 1);
-  function frame() {
-    if (pos == 5) {
-      clearInterval(id);
-    } else {
-      pos++;
-      elem.style.left = pos*5 + 'px';
-    }
-  }
-}
-
-// animate computer's choice right to left
-var id2 = null;
-function compAnim() {
-  var elem2 = compChosen;
-  var pos2 = 100;
-  clearInterval(id2);
-  id2 = setInterval(frame, );
-  function frame() {
-    if (pos2 == 5) {
-      clearInterval(id2);
-    } else {
-      pos2--;
-      elem2.style.left = pos2*5 + 'px';
-    }
-  }
-} 
